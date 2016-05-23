@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayerViewControl">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAZ-6A-Uo9">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-h8-fxt">
+                            <rect key="frame" x="5" y="5" width="30" height="30"/>
+                            <state key="normal" title="返回"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-6B-eDj">
+                            <rect key="frame" x="565" y="5" width="30" height="30"/>
+                            <state key="normal" title="切换"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="b4S-h8-fxt" firstAttribute="top" secondItem="RAZ-6A-Uo9" secondAttribute="top" constant="5" id="NAu-il-cK6"/>
+                        <constraint firstItem="a5O-6B-eDj" firstAttribute="top" secondItem="RAZ-6A-Uo9" secondAttribute="top" constant="5" id="Rpn-C8-Gg4"/>
+                        <constraint firstAttribute="height" constant="44" id="See-6m-p5l"/>
+                        <constraint firstAttribute="height" constant="50" id="Tkt-81-adH"/>
+                        <constraint firstAttribute="bottom" secondItem="a5O-6B-eDj" secondAttribute="bottom" constant="5" id="VIm-C2-5bH"/>
+                        <constraint firstAttribute="trailing" secondItem="a5O-6B-eDj" secondAttribute="trailing" constant="5" id="Ysk-Df-ERh"/>
+                        <constraint firstAttribute="width" secondItem="RAZ-6A-Uo9" secondAttribute="height" multiplier="5:1" id="hJx-uo-E9n"/>
+                        <constraint firstItem="b4S-h8-fxt" firstAttribute="leading" secondItem="RAZ-6A-Uo9" secondAttribute="leading" constant="5" id="og0-f2-1D1"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="See-6m-p5l"/>
+                            <exclude reference="hJx-uo-E9n"/>
+                            <exclude reference="VIm-C2-5bH"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeN-Ug-NK4">
+                    <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5U-xZ-lOo">
+                            <rect key="frame" x="5" y="25" width="30" height="30"/>
+                            <state key="normal" title="播放"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jW-sZ-ner">
+                            <rect key="frame" x="40" y="25" width="30" height="30"/>
+                            <state key="normal" title="暂停"/>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EB9-t5-yfT">
+                            <rect key="frame" x="73" y="25" width="524" height="31"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.67190179350000001" green="0.75990372470000001" blue="0.52799546360000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4k7-uC-jR0"/>
+                        <constraint firstItem="b5U-xZ-lOo" firstAttribute="leading" secondItem="aeN-Ug-NK4" secondAttribute="leading" constant="5" id="7Q7-8t-7AE"/>
+                        <constraint firstAttribute="bottom" secondItem="9jW-sZ-ner" secondAttribute="bottom" constant="5" id="86s-cx-HNW"/>
+                        <constraint firstAttribute="bottom" secondItem="EB9-t5-yfT" secondAttribute="bottom" constant="5" id="8M4-D0-EJF"/>
+                        <constraint firstAttribute="bottom" secondItem="b5U-xZ-lOo" secondAttribute="bottom" constant="5" id="ERN-Lb-ezS"/>
+                        <constraint firstItem="EB9-t5-yfT" firstAttribute="leading" secondItem="9jW-sZ-ner" secondAttribute="trailing" constant="5" id="LYQ-Ne-Pbd"/>
+                        <constraint firstAttribute="trailing" secondItem="EB9-t5-yfT" secondAttribute="trailing" constant="5" id="NMn-FW-afk"/>
+                        <constraint firstAttribute="width" secondItem="aeN-Ug-NK4" secondAttribute="height" multiplier="5:1" id="Tqa-8S-26f"/>
+                        <constraint firstItem="9jW-sZ-ner" firstAttribute="leading" secondItem="b5U-xZ-lOo" secondAttribute="trailing" constant="5" id="qcy-u3-eHi"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Tqa-8S-26f"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aeN-Ug-NK4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="2tu-Nt-gkh"/>
+                <constraint firstItem="RAZ-6A-Uo9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Rv-YA-mcj"/>
+                <constraint firstAttribute="bottom" secondItem="aeN-Ug-NK4" secondAttribute="bottom" id="6LB-I0-3vo"/>
+                <constraint firstAttribute="trailing" secondItem="RAZ-6A-Uo9" secondAttribute="trailing" id="DoZ-dY-bXD"/>
+                <constraint firstItem="aeN-Ug-NK4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="E5d-Ls-k4g"/>
+                <constraint firstItem="RAZ-6A-Uo9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gty-KL-083"/>
+                <constraint firstAttribute="trailingMargin" secondItem="aeN-Ug-NK4" secondAttribute="trailing" id="iT1-2P-iDK"/>
+                <constraint firstAttribute="trailing" secondItem="aeN-Ug-NK4" secondAttribute="trailing" id="zYe-Jc-5oi"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2tu-Nt-gkh"/>
+                    <exclude reference="iT1-2P-iDK"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
